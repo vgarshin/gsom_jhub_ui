@@ -22,32 +22,7 @@
     </div>
 
     <h3>This will grant the application permission to:</h3>
-    <div>
-        <form method="POST" action="">
-            <input type="hidden" name="_xsrf" value="{{ xsrf }}"/>
-            {# these are the 'real' inputs to the form -#}
-            {% for scope in allowed_scopes %}
-            <input type="hidden" name="scopes" value="{{ scope }}"/>
-            {% endfor %}
-
-            {% for scope_info in scope_descriptions %}
-            <div class="checkbox input-group">
-                <label>
-                    <input type="checkbox" name="raw-scopes" checked="true" title="This authorization is required"
-                           disabled="disabled"
-                           {# disabled because it is required #} />
-                    <span>
-            {{ scope_info['description'] }}
-            {% if scope_info['filter'] %}
-            Applies to {{ scope_info['filter'] }}.
-            {% endif %}
-          </span>
-                </label>
-            </div>
-            {% endfor %}
-            <input type="submit" value="Authorize" class="form-control btn-jupyter"/>
-        </form>
-    </div>
+    
 </div>
 
 {% endblock %}
