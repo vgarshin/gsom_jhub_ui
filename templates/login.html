@@ -9,27 +9,22 @@
 {% block main %}
 
 
+<div class="contentLeft">
+  <img src="https://design.gsom.spbu.ru/assets/images/brand-assets/logo-spbu-eng.svg" alt="GSOM SPBU logo">
+</div>
+<h1 class="text-center">Welcome to SimBA</h1>
+<p style="text-align:center">
+  SimBA or Simulation platfrom for Busuness Analytics and Bid Data is a flexible and powerful tool<br>
+  for the students, teachers and researches of Graduate School of Management SPbU (GSOM SPbU).<br>
+  The platform is based on JupyterHub and it is free for all users with GSOM account<br>
+  <br>
+  Join our <a href="https://t.me/simbaplatform" target="_blank">SimBA channel</a> to keep up to date with SimBA's events<br>
+  and may the Force of Data Analytics be with You!
+</p>
 
+    
 {% block login %}
 <div id="login-main" class="container">
-    
-    
-    
-  <div class="contentLeft">
-    <img src="https://design.gsom.spbu.ru/assets/images/brand-assets/logo-spbu-eng.svg" alt="GSOM SPBU logo">
-  </div>
-  <h1 class="text-center">Welcome to SimBA</h1>
-  <p style="text-align:center">
-    SimBA or Simulation platfrom for Busuness Analytics and Bid Data is a flexible and powerful tool<br>
-    for the students, teachers and researches of Graduate School of Management SPbU (GSOM SPbU).<br>
-    The platform is based on JupyterHub and it is free for all users with GSOM account<br>
-    <br>
-    Join our <a href="https://t.me/simbaplatform" target="_blank">SimBA channel</a> to keep up to date with SimBA's events<br>
-    and may the Force of Data Analytics be with You!
-  </p>
-
-
-    
 {% block login_container %}
 {% if custom_html %}
 {{ custom_html | safe }}
@@ -120,20 +115,18 @@
 </form>
 {% endif %}
 {% endblock login_container %}
-    
-    
-    
-  <p style="text-align:center">
-    Need an access? Please <a href="mailto:support@gsom.spbu.ru" target="_blank">contact support</a>
-    <br>
-    Have more questions? Read <a href="https://github.com/vgarshin/gsom_jhub_manual" target="_blank">the manual</a>
-  </p>
-    
-    
-    
+
 </div>
 {% endblock login %}
-
+    
+    
+<p style="text-align:center">
+  Need an access? Please <a href="mailto:support@gsom.spbu.ru" target="_blank">contact support</a>
+  <br>
+  Have more questions? Read <a href="https://github.com/vgarshin/gsom_jhub_manual" target="_blank">the manual</a>
+</p>
+    
+    
 {% endblock %}
 
 {% block script %}
