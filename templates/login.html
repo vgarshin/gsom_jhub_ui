@@ -16,9 +16,7 @@
     
 {% block login %}
 
-<link rel="stylesheet" href="{{ static_url("css/tailwinds.css") }}" type="text/css"/>
-<link rel="stylesheet" href="{{ static_url("css/86c6a737faab92c3.css") }}" type="text/css"/>
-<link rel="stylesheet" href="{{ static_url("css/2b091dff9f0b50e9.css") }}" type="text/css"/>
+<link rel="stylesheet" href="{{% static 'css/tailwinds.css'}" type="text/css"/>
 
 <div id="login-main" class="container">
 {% block login_container %}
