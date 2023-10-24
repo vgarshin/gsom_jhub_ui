@@ -1,0 +1,34 @@
+{% extends "page.html" %}
+
+{% block main %}
+
+<head>
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{{ static_url("css/style.min.css") }}" type="text/css"/>
+  <!-- custom GSOM stylesheet from S3 bucket -->
+  <link rel="stylesheet" href="https://storage.yandexcloud.net/gsom-design-elements/css/style.css"/>
+  {% endblock stylesheet %}
+</head>
+
+<div class="contentLeft">
+  <a href="https://gsom.spbu.ru">
+    <img src="https://storage.yandexcloud.net/gsom-design-elements/logo-spbu-eng.svg" alt="GSOM SPbU logo">
+  </a>
+</div>
+
+<div id="react-admin-hook">
+  <script id="jupyterhub-admin-config">
+    window.api_page_limit = parseInt("{{ api_page_limit|safe }}")
+    window.base_url = "{{ base_url|safe }}"
+  </script>
+  <script src={{ static_url("js/admin-react.js") }}></script>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="container-fluid navbar-default small version_footer">
+  <div class="navbar-text">
+    JupyterHub {{ server_version }}
+  </div>
+</div>
+{% endblock %}
