@@ -8,25 +8,11 @@
 
 {% block main %}
 
-
 <head>
-  <style>
-  @font-face { font-family: Inter; src: url(https://storage.yandexcloud.net/gsom-design-elements/Inter-VariableFont_slnt%2Cwght.ttf) format('truetype'); } 
-  h1 {
-    font-family: Inter 
-  }
-  body {
-    background: url(https://storage.yandexcloud.net/gsom-design-elements/gsom-pattern.svg);
-    background-repeat: no-repeat;
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    padding: 0;
-    background-size: cover;
-    background-position: center;
-  }
-  </style
+  {% block stylesheet %}
+  <link rel="stylesheet" href="https://storage.yandexcloud.net/gsom-design-elements/css/style.css" type="text/css"/>
+  {% endblock stylesheet %}
 </head>
-
 
 <div class="contentLeft">
   <a href="https://gsom.spbu.ru">
@@ -34,7 +20,6 @@
   </a>
 </div>
 
-    
 {% block login %}
 <div id="login-main" class="container">
 {% block login_container %}
@@ -42,7 +27,6 @@
 {{ custom_html | safe }}
 {% elif login_service %}
 <div class="service-login">
-
 
   <h1 class="text-center">Welcome to SimBA</h1>
   <p style="text-align:center">
@@ -53,7 +37,6 @@
     Join our <a href="https://t.me/simbaplatform" target="_blank">SimBA channel</a> to keep up to date with SimBA's events<br>
     and may the Force of Data Analytics be with You!
   </p>
-
 
   <p id='insecure-login-warning' class='hidden'>
   Warning: JupyterHub seems to be served over an unsecured HTTP connection.
@@ -143,12 +126,10 @@
 </div>
 {% endblock login %}
 
-
 <p style="text-align:center">
   Need an access? Please <a href="mailto:support@gsom.spbu.ru" target="_blank">contact support</a><br>
   Have more questions? Read <a href="https://github.com/vgarshin/gsom_jhub_manual" target="_blank">the manual</a>
 </p>
-
 
 {% endblock %}
 
