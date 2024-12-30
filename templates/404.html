@@ -1,19 +1,16 @@
 {% extends "error.html" %}
-
-<head>
-  {% block stylesheet %}
-  <link rel="stylesheet" href="{{ static_url("css/style.min.css") }}" type="text/css"/>
-  <!-- custom GSOM stylesheet from S3 bucket -->
-  <link rel="stylesheet" href="https://storage.yandexcloud.net/gsom-design-elements/css/style.css"/>
-  {% endblock stylesheet %}
-</head>
-
-<div class="contentLeft">
-  <a href="https://gsom.spbu.ru">
-    <img src="https://storage.yandexcloud.net/gsom-design-elements/logo-spbu-eng.svg" alt="GSOM SPbU logo">
-  </a>
-</div>
-
+  <head>
+    {% block stylesheet %}
+    <link rel="stylesheet" href="{{ static_url("css/style.min.css") }}" type="text/css"/>
+    <!-- custom GSOM stylesheet from S3 bucket -->
+    <link rel="stylesheet" href="https://storage.yandexcloud.net/gsom-design-elements/css/style.css"/>
+    {% endblock stylesheet %}
+  </head>
+  <div class="contentLeft">
+    <a href="https://gsom.spbu.ru">
+      <img src="https://storage.yandexcloud.net/gsom-design-elements/logo-spbu-eng.svg" alt="GSOM SPbU logo">
+    </a>
+  </div>
 {% block error_detail %}
-<p>Jupyter has lots of moons, but this is not one...</p>
-{% endblock %}
+  <p>Jupyter has lots of moons, but this is not one...</p>
+{% endblock error_detail %}

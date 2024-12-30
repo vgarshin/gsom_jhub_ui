@@ -2,27 +2,20 @@
 {% if announcement_logout is string %}
   {% set announcement = announcement_logout %}
 {% endif %}
-
 {% block main %}
-
-<head>
-  {% block stylesheet %}
-  <link rel="stylesheet" href="{{ static_url("css/style.min.css") }}" type="text/css"/>
-  <!-- custom GSOM stylesheet from S3 bucket -->
-  <link rel="stylesheet" href="https://storage.yandexcloud.net/gsom-design-elements/css/style.css"/>
-  {% endblock stylesheet %}
-</head>
-
-<div class="contentLeft">
-  <a href="https://gsom.spbu.ru">
-    <img src="https://storage.yandexcloud.net/gsom-design-elements/logo-spbu-eng.svg" alt="GSOM SPbU logo">
-  </a>
-</div>
-
-<div id="logout-main" class="container">
-  <p>
-    Successfully logged out.
-  </p>
-</div>
-
-{% endblock %}
+  <head>
+    {% block stylesheet %}
+    <link rel="stylesheet" href="{{ static_url("css/style.min.css") }}" type="text/css"/>
+    <!-- custom GSOM stylesheet from S3 bucket -->
+    <link rel="stylesheet" href="https://storage.yandexcloud.net/gsom-design-elements/css/style.css"/>
+    {% endblock stylesheet %}
+  </head>
+  <div class="contentLeft">
+    <a href="https://gsom.spbu.ru">
+      <img src="https://storage.yandexcloud.net/gsom-design-elements/logo-spbu-eng.svg" alt="GSOM SPbU logo">
+    </a>
+  </div>
+  <div id="logout-main" class="container">
+    <p>Successfully logged out.</p>
+  </div>
+{% endblock main %}
